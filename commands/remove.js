@@ -20,7 +20,11 @@ const remove = (key, member) => {
     // if member exists in key, remove
   } else if (keyMembers[key].includes(member)) {
     keyMembers[key] = keyMembers[key].filter((m) => m !== member);
-    console.log(chalk.yellow.bold(`Member:${member} successfully removed.`));
+    console.log(
+      chalk.yellow.bold(
+        `Member: "${member}" successfully removed from key: "${key}".`
+      )
+    );
     // if member does not exist in key, console log error message
   } else {
     console.log(
